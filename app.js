@@ -10,6 +10,7 @@ var logger = require('morgan');
 var mongoose = require('mongoose');
 
 var dbRoute = process.env.DB_ROUTE;
+var dbRoute = process.env.MONGODB_URI || 'mongodb://localhost/forum'
 var port = process.env.PORT || 3000;
 
 // Create Admin Account 
