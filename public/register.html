@@ -1,0 +1,13 @@
+<div>
+    <div class="auth-box-register">
+        <form ng-submit="register()">
+            <h1 class="forum-title">Forum</h1>
+            <p ng-show="registerError" class="error-message">{{registerError}}</p>
+            <input type="text" class="auth-input" placeholder="Your Name" ng-model="newUser.name">
+            <input type="text" class="auth-input" placeholder="Email" ng-model="newUser.email">
+            <input type="password" class="auth-input" placeholder="Password" ng-model="newUser.password">
+            <input type="password" class="auth-input" placeholder="Confirm Password" ng-model="newUser.confirmPassword">
+            <button type="submit" class="auth-btn">Register</button>
+        </form>
+    </div>
+</div>

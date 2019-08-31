@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="Forum">
+
+<head>
+  <title>Forum</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.min.js"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+  </style>
+
+  <script src="javascripts/angularApp.js"></script>
+  <script src="javascripts/mainCtrl.js"></script>
+  <script src="javascripts/loginCtrl.js"></script>
+  <script src="javascripts/registerCtrl.js"></script>
+  <script src="javascripts/postsCtrl.js"></script>
+  <script src="javascripts/usersCtrl.js"></script>
+  <script src="javascripts/myPostsCtrl.js"></script>
+  <script src="javascripts/topPostsCtrl.js"></script>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel='stylesheet' href='/stylesheets/auth.css' />
+  <link rel='stylesheet' href='/stylesheets/main.css' />
+  <link rel='stylesheet' href='/stylesheets/posts.css' />
+  <link rel='stylesheet' href='/stylesheets/users.css' />
+
+</head>
+
+<body>
+  <a href="#/" class='forum-btn'>Forum</a>
+  <input type="checkbox" id="toggle">
+  <label for='toggle' class='nav-open'><img src="https://icon.now.sh/burger/B25C5C/30" alt="+" /></label>
+  <div class="nav">
+    <label class="nav-close" for="toggle"><img src="https://icon.now.sh/x/B25C5C/25" alt="X" /></label>
+    <a href="#/" ng-show="authenticated">Home</a>
+    <a href="#/login" ng-show="!authenticated">Login</a>
+    <a href="#/register" ng-show="!authenticated">Register</a>
+    <a href="#/posts" ng-show="admin">Posts</a>
+    <a href="#/users" ng-show="admin" class="page-btn">Users</a>
+    <a href="#/myposts" ng-show="authenticated && !admin">My Posts</a>
+    <a href="#/topposts" ng-show="authenticated">Top Posts</a>
+    <a ng-show="authenticated" ng-click="logout()">Logout</a>
+  </div>
+  <div ng-view></div>
+</body>
+
+</html>

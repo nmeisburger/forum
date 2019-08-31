@@ -1,0 +1,59 @@
+.posts-page {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 30%;
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+.post-author {
+    margin: 2% 4% 1% 4%;
+}
+
+.post-time-page {
+    margin-top: 3.5%;
+    font-size: 0.7rem;
+}
+
+.remove-post-btn {
+    height: 30px;
+    width: 33px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 3px;
+    transform: translateY(7px);
+    margin-right: 2%;
+    transition: 0.2s ease-in-out;
+}
+
+.remove-post-btn:hover {
+    background: #B25C5C;
+}
+
+.remove-post-popup {
+    position: fixed;
+    margin: 6% auto auto auto;
+    z-index: 999;
+    background-color: #404A5B;
+    width: 350px;
+    border: 2px solid #B25C5C;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+.remove-post-popup-message {
+    font-size: 1.5rem;
+    color: #B25C5C;
+    margin: 2%;
+    font-family: 'Work Sans', sans-serif;
+}
+
+@media screen and (max-width: 800px) {
+    .posts-page {
+        width: 90%;
+        margin: 0 5%;
+    }
+}

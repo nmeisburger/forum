@@ -1,0 +1,250 @@
+.main-title {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 4rem;
+    color: #B25C5C;
+    text-align: center;
+    padding-top: 10%;
+    margin: 0 0 8% 0;
+}
+
+.post-menu {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 2%;
+    text-align: center;
+}
+
+.new-post {
+    font-family: 'Work Sans', sans-serif;
+    width: 96%;
+    background: none;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #B25C5C;
+    font-size: 1rem;
+    color: #B25C5C;
+}
+
+.post-btn {
+    width: 200px;
+    font-size: 1.5rem;
+    height: 40px;
+    margin: 2% auto;
+    background: none;
+    padding: 5px 0;
+    text-align: center;
+    border-radius: 30px;
+    border: none;
+    border: 1px solid;
+    border-color: #B25C5C;
+    transition: 0.3s ease-in-out;
+    font-family: 'Work Sans', sans-serif;
+    color: #B25C5C;
+    position: relative;
+    overflow: hidden;
+}
+
+.post-btn::before {
+    content:"";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 0;
+    width: 0%;
+    border-radius: 200%;
+    transition: 0.6s ease-in-out;
+    background: #B25C5C;
+    z-index: -1;
+}
+
+.post-btn:hover::before {
+    height: 500%;
+    width: 200%;
+}
+
+.post-btn:hover {
+    color: #404A5B;
+}
+
+.new-post:focus {
+    outline: 0;
+}
+
+.posts {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3% auto;
+}
+
+.post {
+    width: 100%;
+    margin: 5% 0;
+    border: 1px solid #7EA2BA;
+    font-family: 'Work Sans', sans-serif;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.post-header {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+    width: 100%;
+    color: #404A5B;
+    background: #7EA2BA;
+}
+
+.post-time {
+    font-size: 1rem;
+    margin-left: 3%;
+}
+
+.post-votes {
+    margin: 2% 5% 0 auto;
+}
+
+.upvote-post-btn {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    text-align: center;
+    transform: translateY(7px);
+    margin-right: 2%;
+    transition: 0.2s ease-in-out;
+}
+
+.upvote-post-btn:hover {
+    background: #B25C5C;
+}
+
+
+.post-content {
+    font-size: 1rem;
+    margin: 20px 30px 30px 30px;
+    color: #7EA2BA;
+}
+
+.animation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    z-index: -1;
+    position: absolute;
+    margin-top: -18%;
+    width: 50%;
+    margin-left: 25%;
+    opacity: 0.6;
+}
+
+.obj {
+    width: 8px;
+    height: 0px;
+    margin: 0 10px;
+    border-radius: 10px;
+    background: #7EA2BA;
+    animation: sine 2.5s infinite;
+}
+
+@media screen and (max-width: 800px) {
+    .posts, .post-menu {
+        width: 90%;
+    }
+}
+
+@keyframes sine {
+    0%{
+        height: 0;
+    }
+    50%{
+        height: 150px;
+    }
+    100%{
+        height: 0;
+    }
+}
+
+.obj:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.obj:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.obj:nth-child(4) {
+    animation-delay: 0.8s;
+}
+.obj:nth-child(5) {
+    animation-delay: 1.3s;
+}
+.obj:nth-child(6) {
+    animation-delay: 1s;
+}
+.obj:nth-child(7) {
+    animation-delay: 1.2s;
+}
+.obj:nth-child(8) {
+    animation-delay: 1.4s;
+}
+.obj:nth-child(9) {
+    animation-delay: 1.8s;
+}
+.obj:nth-child(10) {
+    animation-delay: 1.4s;
+}
+.obj:nth-child(11) {
+    animation-delay: 1.6s;
+}
+.obj:nth-child(12) {
+    animation-delay: 2.2s;
+}
+.obj:nth-child(13) {
+    animation-delay: 2.4s;
+}
+.obj:nth-child(14) {
+    animation-delay: 2.6s;
+}
+.obj:nth-child(15) {
+    animation-delay: 2.8s;
+}
+.obj:nth-child(16) {
+    animation-delay: 3s;
+}
+.obj:nth-child(17) {
+    animation-delay: 3.2s;
+}
+.obj:nth-child(18) {
+    animation-delay: 3s;
+}
+.obj:nth-child(19) {
+    animation-delay: 3.6s;
+}
+.obj:nth-child(20) {
+    animation-delay: 3.8s;
+}
+.obj:nth-child(21) {
+    animation-delay: 4s;
+}
+.obj:nth-child(22) {
+    animation-delay: 3.6s;
+}
+.obj:nth-child(23) {
+    animation-delay: 3.8s;
+}
+.obj:nth-child(24) {
+    animation-delay: 4s;
+}
+.obj:nth-child(25) {
+    animation-delay: 4.2s;
+}
+.obj:nth-child(26) {
+    animation-delay: 4.4s;
+}
+.obj:nth-child(27) {
+    animation-delay: 4.6s;
+}
+.obj:nth-child(28) {
+    animation-delay: 4.8s;
+}

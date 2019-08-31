@@ -1,0 +1,12 @@
+<div class="posts-page">
+        <div ng-repeat="post in posts" class="post">
+            <div class="post-header">
+                <p class="post-time">{{post.created_at | date:"h:mma 'on' MMM d, y"}}</p>
+                <p class="post-votes">{{post.votes}}</p>
+                <div class="upvote-post-btn" ng-click="upVotePost(post._id)" ng-show="authenticated">
+                    <img src='https://icon.now.sh/triangleUp/404A5B/30' alt='^' />
+                </div>
+            </div>
+            <p class="post-content">{{post.content}}</p>
+        </div>
+    </div>

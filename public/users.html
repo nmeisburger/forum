@@ -1,0 +1,27 @@
+<div class="users">
+    <div ng-repeat="user in users" class="user">
+        <p class='user-name'>{{user.name}}</p>
+        <div class="line"></div>
+        <p class="user-email">{{user.email}}</p>
+        <div class="user-btns">
+            <button class="user-function-btn" ng-show="!user.admin" ng-click="beginPromoteUser(user._id)">Promote User to Admin</button>
+            <button class="user-function-btn" ng-show="!user.admin" ng-click="beginRemoveUser(user._id)">Remove User</button>
+        </div>
+    </div>
+    <div class="user-popup" ng-show="promoteUser.requestPassword">
+        <form ng-submit="confirmPromoteUser()">
+            <p class="user-popup-message">Enter Admin Password to Promote User to Admin</p>
+            <input type="password" class="auth-input" placeholder="Password" ng-model="promoteUser.passwordConfirm">
+            <button type="submit" class="auth-btn">Promote User</button>
+        </form>
+        <button class="auth-btn" ng-click="closePromoteUserPopup()">Cancel</button>
+    </div>
+    <div class="user-popup" ng-show="removeUser.requestPassword">
+        <form ng-submit="confirmRemoveUser()">
+            <p class="remove-post-popup-message">Enter Admin Password to Remove User</p>
+            <input type="password" class="auth-input" placeholder="Password" ng-model="removeUser.passwordConfirm">
+            <button type="submit" class="auth-btn">Remove User</button>
+        </form>
+        <button class="auth-btn" ng-click="closeRemoveUserPopup()">Cancel</button>
+    </div>
+</div>

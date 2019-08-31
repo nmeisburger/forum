@@ -1,0 +1,74 @@
+.users {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10% 0;
+    margin: 0 auto;
+}
+
+.user {
+    width: 30%;
+    border: 1px solid #7EA2BA;
+    padding: 3%;
+    font-family: 'Work Sans', sans-serif;
+    border-radius: 10px;
+    margin: 2.5%;
+    text-align: center;
+    color: #7EA2BA;
+}
+
+.user-name {
+    font-size: 2rem;
+    margin: 4% 2%;
+}
+
+.user-email {
+    margin: 3% 2%;
+}
+
+.user-function-btn {
+    color: #B25C5C;
+    margin: 2% auto;
+    /* width: 100px; */
+    font-family: 'Work Sans', sans-serif;
+    padding: 5px 8px;
+    border: 1px solid #B25C5C;
+    background-color: #404A5B;
+    border-radius: 30px;
+    transition: 0.2s ease-in-out;
+}
+
+.user-function-btn:hover {
+    background: #B25C5C;
+    color: #404A5B;
+}
+
+.user-popup {
+    position: fixed;
+    margin: 6% auto auto auto;
+    z-index: 999;
+    background-color: #404A5B;
+    width: 350px;
+    border: 2px solid #B25C5C;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+.user-popup-message {
+    font-size: 1.5rem;
+    color: #B25C5C;
+    margin: 2%;
+    font-family: 'Work Sans', sans-serif;
+}
+
+@media screen and (max-width: 800px) {
+    .users {
+        width: 90%;
+    }
+    .user {
+        width: 80%;
+    }
+}

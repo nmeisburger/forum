@@ -1,0 +1,11 @@
+<div>
+    <div class="auth-box-login">
+        <form ng-submit="login()">
+            <h1 class="forum-title">Forum</h1>
+            <p ng-show="loginError" class="error-message">{{loginError}}</p>
+            <input type="text" class="auth-input" placeholder="Email" ng-model="user.email">
+            <input type="password" class="auth-input" placeholder="Password" ng-model="user.password">
+            <button type="submit" class="auth-btn">Login</button>
+        </form>
+    </div>
+</div>

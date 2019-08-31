@@ -1,0 +1,21 @@
+<div class="posts-page">
+    <div ng-repeat="post in posts" class="post">
+        <div class="post-header">
+            <p class="post-author">{{post.author}}</p>
+            <p class="post-time-page">{{post.created_at | date:"h:mma 'on' MMM d, y"}}</p>
+            <p class="post-votes">{{post.votes}}</p>
+            <div class="remove-post-btn" ng-show="authenticated" ng-click=beginDelete(post._id)>
+                <img src='https://icon.now.sh/trash/404A5B/20' alt='X' />
+            </div>
+        </div>
+        <p class="post-content">{{post.content}}</p>
+    </div>
+    <div class="remove-post-popup" ng-show="queueDelete.requestPassword">
+        <form ng-submit="confirmDelete()">
+            <p class="remove-post-popup-message">Enter Your Password to Delete Post</p>
+            <input type="password" class="auth-input" placeholder="Password" ng-model="queueDelete.password_confirm">
+            <button type="submit" class="auth-btn">Delete Post</button>
+        </form>
+        <button class="auth-btn" ng-click="closePopup()">Cancel</button>
+    </div>
+</div>

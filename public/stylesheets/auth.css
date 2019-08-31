@@ -1,0 +1,84 @@
+.auth-box-login {
+    width: 350px;
+    margin: 0 auto;
+    padding-top: 10%;
+    text-align: center;
+}
+
+.auth-box-register {
+    width: 350px;
+    margin: 0 auto;
+    padding-top: 5%;
+    text-align: center;
+}
+
+.forum-title {
+    font-weight: normal;
+    color: #B25C5C;
+    font-size: 5rem;
+    font-family: 'Work Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.error-message {
+    color: #B25C5C;
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+}
+
+.auth-input, .auth-btn {
+    width: 300px;
+    font-size: 1.5rem;
+    height: 40px;
+    margin: 10px;
+    background: none;
+    padding: 5px 0;
+    text-align: center;
+    border-radius: 30px;
+    border: 1px solid;
+    border-color: #7EA2BA;
+    transition: 0.3s ease-in-out;
+    font-family: 'Work Sans', sans-serif;
+    color: #7EA2BA;
+}
+
+.auth-input:focus, .auth-input:hover {
+    background: #7EA2BA;
+    outline: 0;
+    color: #404A5B;
+    cursor: pointer;
+}
+
+.auth-btn {
+    font-size: 1.5rem;
+    color: #B25C5C;
+    height: 50px;
+    border-color: #B25C5C;
+    position: relative;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.auth-btn:hover {
+    color: #404A5B;
+}
+
+.auth-btn:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 0;
+    width: 0;
+    border-radius: 100%;
+    background-color: #B25C5C;
+    transition: 1s ease;
+    z-index: -1;
+}
+
+.auth-btn:hover::before {
+    width: 150%;
+    height: 400%;
+}
