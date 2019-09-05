@@ -30,16 +30,16 @@
 <body>
   <a href="#/" class='forum-btn'>Forum</a>
   <input type="checkbox" id="toggle">
-  <label for='toggle' class='nav-open'><img src="https://icon.now.sh/burger/B25C5C/30" alt="+" /></label>
-  <div class="nav">
-    <label class="nav-close" for="toggle"><img src="https://icon.now.sh/x/B25C5C/25" alt="X" /></label>
-    <a href="#/" ng-show="authenticated">Home</a>
-    <a href="#/login" ng-show="!authenticated">Login</a>
-    <a href="#/register" ng-show="!authenticated">Register</a>
-    <a href="#/posts" ng-show="admin">Posts</a>
-    <a href="#/users" ng-show="admin" class="page-btn">Users</a>
-    <a href="#/myposts" ng-show="authenticated && !admin">My Posts</a>
-    <a href="#/topposts" ng-show="authenticated">Top Posts</a>
+  <label class='nav-open' ng-click="toggleNav()"><img src="https://icon.now.sh/burger/B25C5C/30" alt="+" /></label>
+  <div class="nav" id="nav">
+    <label class="nav-close" ng-click='toggleNav()'><img src="https://icon.now.sh/x/B25C5C/25" alt="X" /></label>
+    <a href="#/" ng-click='toggleNav()' ng-show="authenticated">Home</a>
+    <a href="#/login" ng-click='toggleNav()' ng-show="!authenticated">Login</a>
+    <a href="#/register" ng-click='toggleNav()' ng-show="!authenticated">Register</a>
+    <a href="#/posts" ng-click='toggleNav()' ng-show="admin">Posts</a>
+    <a href="#/users" ng-click='toggleNav()' ng-show="admin" class="page-btn">Users</a>
+    <a href="#/myposts" ng-click='toggleNav()' ng-show="authenticated && !admin">My Posts</a>
+    <a href="#/topposts" ng-click='toggleNav()' ng-show="authenticated">Top Posts</a>
     <a ng-show="authenticated" ng-click="logout()">Logout</a>
   </div>
   <div ng-view></div>

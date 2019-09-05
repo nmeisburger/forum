@@ -4,6 +4,7 @@ var app = angular.module('Forum', ['ngRoute']).run(function ($rootScope, $http, 
     $rootScope.user = '';
     $rootScope.password = '';
     $rootScope.admin = false;
+    $rootScope.openNav = false;
 
     $rootScope.logout = function () {
         $rootScope.authenticated = false;
@@ -11,8 +12,19 @@ var app = angular.module('Forum', ['ngRoute']).run(function ($rootScope, $http, 
         $rootScope.user_id = '';
         $rootScope.password = '';
         $rootScope.admin = false;
+        $rootScope.toggleNav();
         $location.path('/');
     }
+
+    $rootScope.toggleNav = function () {
+        $rootScope.openNav = !$rootScope.openNav;
+        if ($rootScope.openNav) {
+            document.getElementById('nav').style.left = 0;
+        } else {
+            document.getElementById('nav').style.left = '100%';
+        }
+    }
+
 })
 
 app.config(function ($routeProvider) {
